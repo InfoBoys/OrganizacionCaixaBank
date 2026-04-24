@@ -1,0 +1,186 @@
+% !TEX program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% Trabajo Final - Organización de Empresas (GIADE)
+% Universidad de Granada — Curso 2025-2026
+% Empresa analizada: CaixaBank (sucursal)
+
+\documentclass[print, color]{ugrTFG}
+
+% -------------------------------------------------------------------
+% AJUSTES DE FORMATO SEGÚN INDICACIONES
+% -------------------------------------------------------------------
+
+% Fuente Times New Roman (alternativa LaTeX a Calibri/TNR de Word)
+\usepackage{mathptmx}
+
+% Márgenes: 2,5 cm en los cuatro lados
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\recalctypearea
+
+% Interlineado múltiple 1,25
+\setstretch{1.25}
+
+% -------------------------------------------------------------------
+% INFORMACIÓN DEL TRABAJO Y EL EQUIPO
+% -------------------------------------------------------------------
+
+\newcommand{\miTitulo}{Informe-Diagnóstico: Análisis de la Estructura Organizativa de CaixaBank\xspace}
+
+\newcommand{\miNombre}{%
+  Jose Ángel Carretero Montes \\
+  David Bacas Posadas \\
+  Jesús Rodríguez González \\
+  Julián Carrión Tóbar \\
+  Ismael Sallami Moreno\xspace
+}
+
+\newcommand{\miGrado}{Doble Grado en Ingeniería Informática y ADE (GIADE)}
+\newcommand{\miFacultad}{Facultad de Ciencias Económicas y Empresariales}
+\newcommand{\miUniversidad}{Universidad de Granada}
+
+\newcommand{\miTutor}{
+  Gonzalo Sánchez Vizcaíno \\ \emph{Departamento de Organización de Empresas II}
+}
+
+\newcommand{\miCurso}{2025-2026\xspace}
+
+\hypersetup{
+  pdftitle={\miTitulo},
+  pdfauthor={GIADE --- \miFacultad, \miUniversidad},
+  pdfsubject={Trabajo Final de Asignatura — Organización de Empresas}
+}
+
+% -------------------------------------------------------------------
+% PORTADA PERSONALIZADA (sin referencias a TFG)
+% -------------------------------------------------------------------
+
+\renewcommand{\maketitle}{
+  \begin{titlepage}
+    \AddToShipoutPicture*{\BackgroundPic}
+    \phantomsection
+    \pdfbookmark[1]{Título}{title}
+
+    \begin{addmargin}[2.575cm]{0cm}
+      \begin{flushleft}
+        \Large
+        \hfill\vfil
+
+        \large{\textsf{\miFacultad}}
+        \vfill
+
+        {\large\textsc{\miGrado}} \vfill
+
+        {\large\textsc{Trabajo Final de Asignatura — Organización de Empresas}}
+
+        \begin{flushleft}
+          \Huge
+          \setstretch{0.8}
+          \miTitulo
+        \end{flushleft}
+
+        \vfill\vfill\vfill\vfill
+
+        \textsf{\normalsize{Presentado por:}}\\
+        {\small\textrm{%
+          Jose Ángel Carretero Montes \quad
+          David Bacas Posadas \quad
+          Jesús Rodríguez González \\
+          Julián Carrión Tóbar \quad
+          Ismael Sallami Moreno
+        }}
+        \bigskip
+
+        \textsf{\normalsize{Curso académico \miCurso}}
+      \end{flushleft}
+    \end{addmargin}
+  \end{titlepage}
+  \cleardoublepage
+
+  % Página interior con tutor
+  \thispagestyle{empty}
+
+  \begin{center}
+    \large
+    \vspace*{\stretch{1}}
+    \begingroup
+    \huge{\miTitulo} \\ \bigskip
+    \endgroup
+    \vspace{\stretch{5}}
+  \end{center}
+
+  \newpage
+  \thispagestyle{empty}
+  \hfill
+  \vfill
+
+  Trabajo Final de Asignatura. Curso académico \miCurso.
+  \bigskip
+
+  \begin{minipage}[t]{0.30\textwidth}
+    \flushleft
+    \textbf{Profesor responsable}
+  \end{minipage}
+  \begin{minipage}[t]{0.40\textwidth}
+    \flushleft
+    \miTutor
+  \end{minipage}
+  \begin{minipage}[t]{0.30\textwidth}
+    \flushright
+    \miGrado
+    \medskip
+
+    \miFacultad
+    \medskip
+
+    \miUniversidad
+  \end{minipage}
+}
+
+% -------------------------------------------------------------------
+% DOCUMENTO
+% -------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+% -------------------------------------------------------------------
+% FRONTMATTER
+% -------------------------------------------------------------------
+\frontmatter
+
+\tableofcontents
+\cleardoublepage
+
+% -------------------------------------------------------------------
+% MAINMATTER
+% -------------------------------------------------------------------
+\mainmatter
+
+% Capítulo 1: Presentación de la organización (redactado por el equipo)
+\input{capitulos/presentacion}
+
+% Capítulo 2: Julián Carrión Tóbar
+\input{capitulos/julian}
+
+% Capítulo 3: Jesús Rodríguez González
+\input{capitulos/jesus}
+
+% Capítulo 4: David Bacas Posadas
+\input{capitulos/david}
+
+% Capítulo 5: Ismael [Apellidos]
+\input{capitulos/ismael}
+
+% Capítulo 6: José Ángel Carretero Montes
+\input{capitulos/joseangel}
+
+% -------------------------------------------------------------------
+% BACKMATTER
+% -------------------------------------------------------------------
+\backmatter
+
+\input{bibliografia}
+
+\end{document}
