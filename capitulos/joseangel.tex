@@ -59,11 +59,6 @@ de tareas en la sucursal: las operaciones más rutinarias (consultas de saldo, t
 pagos) quedan absorbidas por los canales digitales, mientras que el personal presencial
 se orienta cada vez más hacia tareas de asesoramiento y venta de productos complejos.
 
-% --- PENDIENTE DE ENTREVISTA ---
-% Confirmar con la directora qué sistemas usa el personal diariamente
-% y si ha habido reducción de plantilla en la sucursal asociada a la automatización.
-% (Preguntas P39 y P40 de tu bloque)
-
 \subsection{Entorno}
 
 El sector bancario español en el que opera la sucursal se caracteriza por la combinación
@@ -127,20 +122,24 @@ y limita la capacidad de adaptación local.
 \subsection{Análisis del ajuste estructural}
 
 Examinando los factores de contingencia en conjunto, el ajuste con la estructura observada
-en la sucursal puede valorarse del siguiente modo:
+en la sucursal puede valorarse del siguiente modo.
 
 \textbf{Edad y tamaño → ajuste con alta formalización.} El enorme tamaño de CaixaBank
 como organización produce el nivel de formalización elevado que se observa en la sucursal.
 Los procedimientos escritos, los manuales operativos y la supervisión directa del director
 de zona son coherentes con una organización de más de 120 años de historia y decenas de
-miles de empleados. \textbf{Existe ajuste.}
+miles de empleados. El análisis de los mecanismos de coordinación confirma este diagnóstico:
+la normalización de procesos de trabajo es el mecanismo principal de la sucursal, con manuales
+rígidos y sistemas informáticos que impiden saltarse ningún paso del procedimiento. \textbf{Existe ajuste.}
 
 \textbf{Sistema técnico → ajuste con estandarización del núcleo operativo.} Los sistemas
 informáticos regulan y condicionan las tareas rutinarias de los empleados (apertura de
 cuentas, transferencias, scoring de crédito), lo que produce un núcleo de operaciones muy
 formalizado. A la vez, la sofisticación del sistema justifica la existencia de
 especialistas técnicos a nivel corporativo (tecnoestructura) que diseñan y mantienen esas
-herramientas. \textbf{Existe ajuste.}
+herramientas. El análisis del diseño de puestos revela cómo los gestores operativos son
+precisamente los que presentan mayor especialización vertical, con separación máxima entre
+ejecución y administración. \textbf{Existe ajuste.}
 
 \textbf{Entorno dinámico y complejo → ajuste parcial.} Un entorno muy dinámico requeriría,
 en principio, una estructura más orgánica y descentralizada que permita responder con
@@ -154,11 +153,80 @@ estructura presencial se mantiene estable.
 \textbf{Poder → ajuste con alta formalización y centralización.} La presión regulatoria
 externa refuerza directamente la estructura burocrática. Los procedimientos impuestos por
 BCE, Banco de España y CNMV no pueden ser ignorados, lo que hace que la formalización sea
-un requisito de supervivencia y no solo una elección organizativa. \textbf{Existe ajuste.}
+un requisito de supervivencia y no solo una elección organizativa. El análisis de la
+centralización confirma que las decisiones de mayor impacto en riesgo y política comercial
+permanecen en niveles superiores, precisamente como respuesta a estas exigencias normativas.
+\textbf{Existe ajuste.}
 
-% --- PENDIENTE: completar este apartado con ejemplos concretos extraídos
-% de las secciones escritas por Julián, Jesús, David e Ismael, para reforzar
-% el argumento con datos de la entrevista. ---
+La Tabla~\ref{tab:ajuste_factores} resume el grado de ajuste entre los cuatro factores de
+contingencia y la estructura observada en la sucursal. La Figura~\ref{fig:factores_bm}
+ilustra cómo estos factores convergen en la configuración de burocracia maquinal que se
+analiza en la sección siguiente.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Resumen del ajuste entre factores de contingencia y estructura observada.}
+  \label{tab:ajuste_factores}
+  \small
+  \begin{tabular}{p{2.8cm} p{3.8cm} p{4.5cm} c}
+    \toprule
+    \textbf{Factor} & \textbf{Predicción teórica} & \textbf{Observado en la sucursal} & \textbf{Ajuste} \\
+    \midrule
+    Edad y tamaño & Alta formalización y estandarización & Manuales, protocolos y supervisión de zona & Sí \\
+    \addlinespace
+    Sistema técnico & Núcleo operativo estandarizado; tecnoestructura activa & CRM, scoring automático, AML/KYC integrado & Sí \\
+    \addlinespace
+    Entorno & Estructura orgánica y flexible & Estructura burocrática (moderada por regulación y digitalización) & Parcial \\
+    \addlinespace
+    Poder & Alta formalización y centralización & BCE, Banco de España y CNMV imponen procedimientos irrenunciables & Sí \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+      every node/.style={font=\small},
+      factor/.style={
+        rectangle, draw, rounded corners=4pt,
+        fill=blue!8, text width=4cm, align=center,
+        minimum height=1.5cm, inner sep=6pt
+      },
+      centro/.style={
+        rectangle, draw=blue!60!black, line width=1.2pt,
+        rounded corners=5pt, fill=blue!18,
+        text width=4.4cm, align=center,
+        minimum height=2cm, inner sep=8pt, font=\small\bfseries
+      }
+  ]
+    \node[centro] (bm) at (0,0) {Burocracia Maquinal\\[4pt]{\normalfont\footnotesize Configuración dominante}};
+
+    \node[factor] (age) at (-5.5, 2.8)
+      {\textbf{Edad y tamaño}\\+120 años · 40.000 emp.\\{\footnotesize Formalización elevada}};
+
+    \node[factor] (tech) at (-5.5,-2.8)
+      {\textbf{Sistema técnico}\\CRM · scoring · AML/KYC\\{\footnotesize Estandarización del núcleo}};
+
+    \node[factor] (power) at (5.5, 2.8)
+      {\textbf{Poder / Regulación}\\BCE · BdE · CNMV\\{\footnotesize Centralización normativa}};
+
+    \node[factor, fill=orange!10] (env) at (5.5,-2.8)
+      {\textbf{Entorno}\\Dinámico y complejo\\{\footnotesize Ajuste parcial}};
+
+    \draw[->, thick, draw=green!50!black]  (age)   -- (bm);
+    \draw[->, thick, draw=green!50!black]  (tech)  -- (bm);
+    \draw[->, thick, draw=green!50!black]  (power) -- (bm);
+    \draw[->, thick, draw=orange!70!black, dashed] (env) -- (bm);
+
+    \node[font=\scriptsize, text=green!40!black] at (-2.8,  2.0) {Ajuste};
+    \node[font=\scriptsize, text=green!40!black] at (-2.8, -2.0) {Ajuste};
+    \node[font=\scriptsize, text=green!40!black] at ( 2.8,  2.0) {Ajuste};
+    \node[font=\scriptsize, text=orange!70!black] at ( 2.8, -2.0) {Parcial};
+  \end{tikzpicture}
+  \caption{Convergencia de los factores de contingencia sobre la configuración estructural de la sucursal.
+           La flecha discontinua indica ajuste parcial.}
+  \label{fig:factores_bm}
+\end{figure}
 
 \section{Conclusión}
 
@@ -184,23 +252,118 @@ La sucursal presenta todos los rasgos definitorios de una \textbf{burocracia maq
 
 \subsection{Características coherentes con la burocracia maquinal}
 
-% --- COMPLETAR con evidencia específica de la entrevista una vez disponible.
-% Usar los datos de los capítulos de Jesús (formalización), David (puestos)
-% e Ismael (centralización) para argumentar con ejemplos concretos.
-% Estructura sugerida:
-%   - "La alta formalización observada [citar cap. Jesús] es coherente con..."
-%   - "La centralización de las decisiones [citar cap. Ismael] responde a..."
+El análisis de los capítulos precedentes aporta evidencia concreta que respalda la
+adscripción de la sucursal a la burocracia maquinal en cinco dimensiones:
+
+\textbf{1. Normalización de procesos como mecanismo de coordinación principal.}
+El análisis de los mecanismos de coordinación concluye que la normalización de los
+procesos de trabajo es el mecanismo dominante en la sucursal: todos los gestores,
+independientemente de su especialidad, deben seguir manuales y protocolos rígidos, y
+el propio sistema informático impide saltarse los pasos establecidos para tramitar
+cualquier operación. Esta primacía de la normalización de procesos es la señal más
+característica de la burocracia maquinal.
+
+\textbf{2. Alta especialización vertical en los puestos operativos.}
+El análisis del diseño de puestos sitúa a los gestores operativos (comerciales) en el
+cuadrante de máxima especialización vertical: ejecutan tareas completamente programadas,
+cualquier decisión que se desvíe de lo estándar debe escalarse a la directora o
+subdirectora, y existe una separación máxima entre ejecución y administración. En la
+burocracia maquinal, el núcleo de operaciones rutinario carece de autonomía real sobre
+su trabajo; este perfil encaja exactamente con esa descripción.
+
+\textbf{3. Centralización de las decisiones estratégicas y de riesgo.}
+El análisis de la centralización confirma que la descentralización vertical es limitada:
+la directora de sucursal toma decisiones de ejecución operativa de corto plazo
+(distribución de tareas, priorización comercial), mientras que las decisiones de mayor
+impacto ---concesión de crédito por encima de un umbral, política de productos, política
+de precios--- permanecen en la dirección territorial o la sede central. Esta separación
+entre autonomía táctica local y control estratégico central es característica de la
+burocracia maquinal.
+
+\textbf{4. Papel determinante de la tecnoestructura corporativa.}
+Los sistemas de cumplimiento normativo (AML/KYC, MiFID II) están integrados directamente
+en las plataformas tecnológicas, impidiendo al empleado saltarse el procedimiento. La
+tecnoestructura de CaixaBank ---equipos de riesgos, cumplimiento y auditoría interna---
+diseña y controla los procedimientos que la sucursal ejecuta, sin participar en la
+operativa diaria. Esta función de estandarización a distancia es, según Mintzberg, la
+función propia de la tecnoestructura en la burocracia maquinal.
+
+\textbf{5. Control por resultados articulado por la línea jerárquica.}
+La directora de sucursal reporta resultados trimestrales a sus superiores territoriales
+y distribuye objetivos comerciales individualizados por gestor según su especialidad
+(préstamos para empresas al gestor de negocio, productos de inversión al gestor
+Premier, etc.). Este mecanismo de normalización de resultados encaja con la lógica de la
+forma divisional a escala de grupo, y con la burocracia maquinal a escala de sucursal.
 
 \subsection{Características no coherentes con la burocracia maquinal}
 
-% --- COMPLETAR con evidencia de la entrevista. Posibles puntos de desajuste
-% que cabe anticipar (confirmar con los datos):
-%   - Si existen dispositivos de enlace o grupos de trabajo informales entre
-%     empleados, rompe la rigidez burocrática.
-%   - Si los gestores de banca privada o empresas gozan de alta autonomía,
-%     podría apuntar a elementos de burocracia profesional.
-%   - Si el director de sucursal tiene amplio margen de decisión, sugeriría
-%     menor centralización de la esperada.
+La burocracia maquinal clásica predice un núcleo de operaciones homogéneamente rutinario,
+una coordinación exclusivamente basada en procedimientos y una centralización plena del
+poder. La sucursal analizada se desvía de este ideal-tipo en al menos cuatro aspectos:
+
+\textbf{1. Normalización de habilidades como segundo mecanismo de coordinación.}
+El análisis de los mecanismos de coordinación identifica la normalización de habilidades
+como el segundo mecanismo más relevante de la sucursal: los gestores Premier y de Banca
+Personal coordinan su trabajo a través de la confianza en su formación especializada
+(certificación MiFID II, conocimientos en fiscalidad y mercados financieros) y no
+mediante procedimientos rígidos. Este mecanismo es característico de la burocracia
+profesional, no de la maquinal.
+
+\textbf{2. Ampliación vertical de los gestores especializados.}
+El análisis del diseño de puestos muestra que los gestores Premier y de Negocio ocupan
+una posición radicalmente distinta a la de los gestores operativos en el mapa de
+especialización: gozan de un alto grado de control sobre sus propias decisiones y son
+ellos quienes establecen el diagnóstico financiero para sus clientes y gestionan los
+tiempos y estrategias de asesoramiento. En una burocracia maquinal pura, todo el núcleo
+de operaciones tendría alta especialización vertical; la coexistencia de puestos con
+ampliación vertical introduce una lógica de burocracia profesional dentro de la sucursal.
+
+\textbf{3. Adaptación mutua como mecanismo complementario informal.}
+Las reuniones matinales diarias que los empleados celebran antes de iniciar la jornada
+laboral constituyen un dispositivo de adaptación mutua: un mecanismo de coordinación
+horizontal e informal que permite ajustes situacionales y la transmisión de información
+operativa sin mediación jerárquica. En la burocracia maquinal pura, este tipo de
+coordinación es residual; su presencia en la sucursal aporta un grado de flexibilidad
+no previsto en el modelo.
+
+\textbf{4. Descentralización horizontal selectiva hacia los especialistas.}
+El análisis de la centralización constata que los especialistas de la sucursal disponen
+de margen técnico real en su ámbito de actuación, y que su influencia sobre decisiones
+concretas es reconocida por la organización. Esta delegación informal de poder hacia
+los expertos ---sin trasladar la autoridad formal fuera de la jerarquía--- introduce
+un elemento de descentralización horizontal selectiva ajeno a la burocracia maquinal clásica.
+
+\medskip
+
+La Tabla~\ref{tab:coherencia} sintetiza los elementos coherentes y no coherentes con la
+burocracia maquinal identificados en la sucursal.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Coherencia de la sucursal con la burocracia maquinal.}
+  \label{tab:coherencia}
+  \small
+  \begin{tabular}{p{6.2cm} p{6.2cm}}
+    \toprule
+    \textbf{Coherente con burocracia maquinal} & \textbf{No coherente con burocracia maquinal} \\
+    \midrule
+    Normalización de procesos como mecanismo principal &
+    Normalización de habilidades como segundo mecanismo \\
+    \addlinespace
+    Alta especialización vertical en puestos operativos &
+    Ampliación vertical en gestores especializados \\
+    \addlinespace
+    Centralización de decisiones estratégicas y de riesgo &
+    Adaptación mutua informal (reuniones diarias) \\
+    \addlinespace
+    Tecnoestructura diseña procedimientos desde fuera &
+    Descentralización horizontal selectiva hacia expertos \\
+    \addlinespace
+    Control por resultados trimestrales vía jerarquía &
+    Coexistencia de perfiles operativos y profesionales \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \subsection{Hipótesis de estructura híbrida}
 
@@ -211,13 +374,66 @@ seguros, gestión de activos) opera con relativa autonomía estratégica, vincul
 sede mediante sistemas de control del rendimiento (objetivos comerciales, KPIs de
 captación, ratio de morosidad).
 
+Pero la hibridez no se produce únicamente a escala de grupo. Dentro de la propia sucursal
+coexisten dos lógicas organizativas diferenciadas: los puestos operativos responden a la
+lógica de la burocracia maquinal (alta formalización, mínima autonomía, separación
+ejecución-administración), mientras que los puestos de asesoramiento especializado
+(gestores Premier, de Negocio y de Banca Personal) responden a la lógica de la
+burocracia profesional (coordinación por habilidades, ampliación vertical, margen
+decisor propio). Esta doble lógica es coherente con la transformación del modelo de
+negocio bancario: la automatización y la digitalización han absorbido el trabajo
+puramente rutinario, desplazando el valor añadido del personal presencial hacia
+el asesoramiento cualificado.
+
 Es plausible, por tanto, caracterizar la estructura del grupo como una
 \textbf{burocracia maquinal-divisional}: burocrática en sus procedimientos operativos
 y en la gestión de sucursales individuales, y divisional en la articulación de sus
-grandes unidades de negocio.
+grandes unidades de negocio. Y dentro de cada sucursal, puede hablarse de una
+\textbf{hibridez maquinal-profesional} que refleja la segmentación interna entre
+tareas rutinarias y tareas de asesoramiento.
 
-% --- COMPLETAR: una vez recogidos los datos de la entrevista, confirmar o
-% matizar esta hipótesis con evidencia empírica específica de la sucursal. ---
+La Figura~\ref{fig:ajuste_mintzberg} recoge la estimación del grado de ajuste de la
+sucursal analizada con cada una de las configuraciones de Mintzberg. La burocracia
+maquinal obtiene el mayor ajuste, seguida de la forma divisional (a escala de grupo)
+y de la burocracia profesional (a escala de los puestos de asesoramiento).
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xbar,
+      width=11cm,
+      height=5.5cm,
+      xlabel={Grado de ajuste estimado (0--10)},
+      symbolic y coords={
+        Adhocracia,
+        {Estructura simple},
+        {Burocracia profesional},
+        {Forma divisional},
+        {Burocracia maquinal}
+      },
+      ytick=data,
+      xmin=0, xmax=10,
+      nodes near coords,
+      nodes near coords align={horizontal},
+      enlarge y limits=0.22,
+      bar width=11pt,
+      tick label style={font=\small},
+      label style={font=\small},
+    ]
+      \addplot[fill=blue!40, draw=blue!60!black] coordinates {
+        (2,Adhocracia)
+        (2,{Estructura simple})
+        (5,{Burocracia profesional})
+        (6,{Forma divisional})
+        (9,{Burocracia maquinal})
+      };
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Ajuste estimado de la sucursal analizada con las configuraciones estructurales
+           de Mintzberg. Elaboración propia a partir del análisis de capítulos precedentes.}
+  \label{fig:ajuste_mintzberg}
+\end{figure}
 
 \endinput
 % -------------------------------------------------------------------
