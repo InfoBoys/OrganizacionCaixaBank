@@ -119,8 +119,8 @@ Corresponden a las tareas de soporte y transacciones diarias, quienes atienen a 
             \node[above right, teal, font=\small] at (axis cs:-4, -4) {Subdirectora};
 
             % Nombres de los cuadrantes como fondo de guía
-            \node[font=\footnotesize\itshape, text=gray] at (axis cs: -2.5, 2.5) {Puestos no cualificados};
-            \node[font=\footnotesize\itshape, text=gray] at (axis cs: 2.5, 2.5) {Puestos operativos/maquinales};
+            \node[font=\footnotesize\itshape, text=gray] at (axis cs: -2.5, 2.5) {Directivos de primera línea o staff};
+            \node[font=\footnotesize\itshape, text=gray] at (axis cs: 2.5, 2.5) {Puestos operativos (no cualificados)};
             \node[font=\footnotesize\itshape, text=gray] at (axis cs: -2.5, -2.5) {Puestos directivos};
             \node[font=\footnotesize\itshape, text=gray] at (axis cs: 2.5, -2.5) {Puestos profesionales};
             
@@ -134,12 +134,70 @@ Corresponden a las tareas de soporte y transacciones diarias, quienes atienen a 
 
 \section{Diseño de puestos: formalización}
 
-% 4.1 — Formalización
-%
-%   - ¿Están documentadas por escrito las tareas de cada puesto?
-%   - ¿Existe un job description formal?
-%   - ¿En qué medida las situaciones del día a día están reguladas por normas y protocolos?
-%   - ¿Cómo se formaliza el trabajo (manuales, sistemas técnicos, supervisión...)?
+Siguiendo con el hilo del análisis anterior, se pueden agrupar los distintos puestos presentes en la organización para analizar el grado de formalización o preparación necesarios para los mismos:
+
+\subsection{Grupo 1: Puestos Profesionales (Gestores Premier, Banca Personal y Negocio)}
+
+Al tratarse de puestos profesionales se requiere una alta preparación, siendo puestos poco formalizados. Estos trabajos no pueden estar programados ni formalizados por la estructura, pues su mecanismo de coordinación es la normalización de habilidades por conocimientos.
+
+El hecho de que sean ellos mismos quienes tienen el control sobre la realización de su trabajo mediante sus habilidades y conocimientos, ya sean adquiridos de forma interna o externa, explica la predominancia de la preparación frente a la formalización en estos puestos.
+
+\subsection{Grupo 2: Puestos Operativos (Gestores de Operativa o Comerciales)}
+
+Estos puestos presentan una alta formalización y una baja necesidad de preparación especializada previa. Sus tareas a realizar son repetitivas y rutinarias como ya se ha explicado anteriormente, además de que estar completamente normalizadas mediante los sistemas informáticos y los manuales de procedimientos y protocolos de la empresa.
+
+Pese a que en ocasiones la empresa busque perfiles de trabajadores con ciertos títulos académicos para estos puestos, la realidad es que es un trabajo que se rige más por la formalización del mismo que por la preparación de la persona que lo realiza.
+
+Cabe mencionar que el hecho de estar especializado tanto vertical como horizontalmente exige una formalización del puesto de trabajo.
+
+\subsection{Grupo 3: Puestos Directivos (Directora y Subdirectora)}
+
+Como ocurre en la gran mayoría de puestos directivos del ápice estratégico de una organización, estos puestos presentan una formalización muy baja. Se encargan de enfrentar problemas no rutinarios, su trabajo no puede ser programado de ninguna forma, por lo que es imposible la formalización de estos puestos.
+
+Sin embargo, tampoco se puede afirmar que estos puestos requieran sí o sí preparación, ya que en muchas ocasiones estos cargos son ocupados con gente que simplemente tiene mucha experiencia acumulada, pero no se han formado expresamente para labores directivas.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            width=14cm,
+            height=4cm, % Aumentado ligeramente para legibilidad
+            axis lines=middle,
+            xmin=-5.5, xmax=5.8,
+            ymin=0, ymax=3, % Más espacio vertical para etiquetas
+            xlabel={Predominancia en el diseño del puesto},
+            x label style={at={(ticklabel* cs:1)}, anchor=north west, font=\small},
+            hide y axis,
+            xtick={-5, 0, 5},
+            xticklabels={-5 (Preparación), 0, 5 (Formalización)},
+            tick label style={yshift=-6pt},
+            extra x ticks={-4, -3, -2, -1, 0, 1, 2, 3, 4},
+            extra x tick labels={},
+            clip=false
+        ]
+
+            % --- GESTORES ESPECIALIZADOS (Extremo Preparación) ---
+            \addplot[only marks, mark=*, blue, mark size=3.5pt] coordinates {(-4, 0.4)};
+            \node[above, blue, font=\footnotesize\bfseries, align=center] at (axis cs:-4, 0.6) {Gestores\\Especializados};
+
+            % --- DIRECTIVOS (Escalonados para evitar solapamiento) ---
+            % Directora
+            \addplot[only marks, mark=triangle*, orange, mark size=3.5pt] coordinates {(-2.5, 0.2)};
+            \node[above, orange, font=\footnotesize\bfseries, align=center] at (axis cs:-2.5, 0.4) {Directora};
+            
+            % Subdirectora (un poco más baja que la Directora para que se lean ambas)
+            \addplot[only marks, mark=triangle*, teal, mark size=3.5pt] coordinates {(-2.5, -0.2)};
+            \node[above, teal, font=\footnotesize\bfseries] at (axis cs:-2.5, - 0.8) {Subdirectora};
+
+            % --- GESTORES COMERCIALES (Extremo Formalización) ---
+            \addplot[only marks, mark=square*, red, mark size=3.5pt] coordinates {(5, 0.4)};
+            \node[above, red, font=\footnotesize\bfseries, align=center] at (axis cs:5, 0.6) {Gestores\\Comerciales};
+
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Diseño de puestos: Continuo entre Preparación y Formalización.}
+    \label{fig:preparacion_formalizacion_v2}
+\end{figure}
 
 \endinput
 % -------------------------------------------------------------------
