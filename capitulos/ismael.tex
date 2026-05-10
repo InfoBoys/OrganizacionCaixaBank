@@ -33,16 +33,17 @@ retroalimentación ascendente (resultados, incidencias y ajustes operativos), lo
 encaja con el marco teórico del Tema 6 sobre integración entre planificación y
 control del rendimiento.
 
-Con la información pública disponible, puede afirmarse que CaixaBank está reforzando
-la coordinación comercial en canales digitales y remotos mediante herramientas de
-asistencia y automatización, lo que sugiere una planificación más integrada entre
-unidades de negocio, soporte y tecnología [\ref{ref:expansionia2026}].
+La evidencia de entrevista permite concretar este esquema en la sucursal analizada:
+en el periodo reciente se ha impulsado una campaña centrada en clientes mayores de
+65 años, especialmente vinculada a necesidades asociadas al deterioro cognitivo,
+con alcance interno de oficina. La comunicación se articula mediante comités
+semanales y mensuales, junto con circulares semanales, lo que combina mecanismos
+formales periódicos de alineación con seguimiento operativo continuo [\ref{ref:entrevista}].
 
-% --- PENDIENTE DE ENTREVISTA (P29) ---
-% Confirmar con la directora:
-% 1) nombre concreto de campañas que involucran varios puestos/departamentos;
-% 2) si existe coordinación con otras sucursales;
-% 3) periodicidad y canal formal de comunicación.
+Con la información pública disponible, puede afirmarse además que CaixaBank está
+reforzando la coordinación comercial en canales digitales y remotos mediante
+herramientas de asistencia y automatización, lo que sugiere una planificación más
+integrada entre unidades de negocio, soporte y tecnología [\ref{ref:expansionia2026}].
 
 \subsection{Control del rendimiento}
 
@@ -65,17 +66,57 @@ subraya que, en organizaciones jerárquicas, medir simultáneamente el rendimien
 de niveles centrales y de oficina mejora la coherencia entre decisiones estratégicas
 y ejecución operativa [\ref{ref:deville2014}].
 
-Además, la digitalización incrementa la trazabilidad de la actividad comercial y
-operativa, facilitando revisiones más frecuentes y comparables. Esto no elimina el
-papel de la sucursal, pero sí desplaza parte del control hacia sistemas comunes,
-paneles corporativos y procesos más centralizados de supervisión [\ref{ref:ortakoy2019}].
+En el caso observado, los indicadores usados incluyen margen (por ejemplo, en
+seguros y préstamos), número de ventas, captación de clientes (ponderada) y
+recursos. La fijación de objetivos sigue una cadena jerárquica descendente desde
+servicios centrales hacia dirección territorial (Andalucía), dirección comercial
+(Granada-Jaén), dirección de área (Costa Tropical) y, finalmente, sucursal, donde
+se distribuyen entre gestores [\ref{ref:entrevista}].
 
-% --- PENDIENTE DE ENTREVISTA (P27-P28) ---
-% Validar empíricamente:
-% 1) qué KPI concretos recibe la sucursal;
-% 2) quién fija objetivos exactos (territorial/sede);
-% 3) frecuencia real de revisión;
-% 4) consecuencias operativas cuando no se alcanzan los objetivos.
+La revisión del desempeño se está realizando en ciclos de ocho meses, con hitos
+operativos concretos (por ejemplo, meta fijada a 31 de julio). Este diseño combina
+una normalización de resultados de alcance amplio con ajustes de ejecución en la
+unidad local, en línea con el marco de planificación y control del Tema 6
+[\ref{ref:entrevista}] [\ref{ref:ortakoy2019}].
+
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[>=latex, line width=0.9pt, font=\small]
+		% Nodos de la cadena jerárquica
+		\node[draw, rounded corners=3pt, fill=blue!8, minimum width=4.8cm, minimum height=0.85cm] (n1) at (0,0) {Servicios Centrales};
+		\node[draw, rounded corners=3pt, fill=blue!8, minimum width=4.8cm, minimum height=0.85cm] (n2) at (0,-1.25) {Dirección Territorial (Andalucía)};
+		\node[draw, rounded corners=3pt, fill=blue!8, minimum width=4.8cm, minimum height=0.85cm] (n3) at (0,-2.5) {Dirección Comercial (Granada-Jaén)};
+		\node[draw, rounded corners=3pt, fill=blue!8, minimum width=4.8cm, minimum height=0.85cm] (n4) at (0,-3.75) {Dirección de Área (Costa Tropical)};
+		\node[draw, rounded corners=3pt, fill=blue!8, minimum width=4.8cm, minimum height=0.85cm] (n5) at (0,-5.0) {Sucursal};
+		\node[draw, rounded corners=3pt, fill=green!12, minimum width=4.8cm, minimum height=0.85cm] (n6) at (0,-6.25) {Gestores};
+
+		% Flujo descendente de objetivos
+		\draw[->, thick] (n1) -- (n2);
+		\draw[->, thick] (n2) -- (n3);
+		\draw[->, thick] (n3) -- (n4);
+		\draw[->, thick] (n4) -- (n5);
+		\draw[->, thick] (n5) -- (n6);
+		\node[align=left, font=\footnotesize] at (-4.1,-2.7) {\textbf{Objetivos descendentes}\\(asignación y despliegue)};
+
+		% Flujo ascendente de resultados
+		\draw[<-, dashed] (2.55,-6.25) -- (2.55,-5.0);
+		\draw[<-, dashed] (2.55,-5.0) -- (2.55,-3.75);
+		\draw[<-, dashed] (2.55,-3.75) -- (2.55,-2.5);
+		\draw[<-, dashed] (2.55,-2.5) -- (2.55,-1.25);
+		\draw[<-, dashed] (2.55,-1.25) -- (2.55,0);
+		\node[align=left, font=\footnotesize] at (5.2,-2.7) {\textbf{Reporte ascendente}\\(resultados e incidencias)};
+
+		% Recuadros de periodicidad y coordinación de campañas
+		\node[draw, rounded corners=3pt, fill=orange!12, text width=4.9cm, align=left] (seg) at (6.0,-5.6)
+			{\textbf{Control del rendimiento}\\Ciclo: 8 meses\\Hito observado: 31 de julio};
+		\node[draw, rounded corners=3pt, fill=yellow!14, text width=4.9cm, align=left] (cam) at (6.0,-0.9)
+			{\textbf{Planificación de acciones}\\Comités semanales/mensuales\\Circulares semanales};
+		\draw[->, thin] (3.5,-5.15) -- (n5.east);
+		\draw[->, thin] (3.5,-1.25) -- (n3.east);
+	\end{tikzpicture}
+	\caption{Sistema real de planificación y control: objetivos descendentes, reporte ascendente y mecanismos de seguimiento.}
+	\label{fig:cascada_objetivos_ismael}
+\end{figure}
 
 \subsection{Dispositivos de enlace}
 
@@ -85,29 +126,28 @@ paneles corporativos y procesos más centralizados de supervisión [\ref{ref:ort
 %   - ¿Cuál es su objetivo?
 
 En banca minorista, los dispositivos de enlace suelen adoptar formas de coordinación
-intermedia más que estructuras matriciales puras. Con base en el marco teórico y en
-el funcionamiento típico de una red bancaria, pueden identificarse tres mecanismos
-probables en el caso analizado:
+intermedia más que estructuras matriciales puras. En la sucursal analizada se
+identifican los siguientes mecanismos:
 
 \begin{itemize}
-	\item \textbf{Puestos de enlace jerárquico-territorial:} figuras que conectan
-		sucursal y niveles superiores para trasladar directrices, incidencias y
-		necesidades de apoyo.
+	\item \textbf{Puesto de enlace jerárquico-territorial:} el director de área de
+		negocios actúa como puente permanente entre oficina y niveles superiores,
+		canalizando directrices y necesidades operativas.
 	\item \textbf{Reuniones y grupos de trabajo funcionales:} espacios de
-		coordinación entre perfiles comerciales, operativos y de soporte para alinear
-		campañas, objetivos y resolución de problemas.
-	\item \textbf{Enlace técnico-digital:} equipos especializados (tecnología,
-		analítica o soporte remoto) que, sin estar físicamente en la sucursal, inciden
-		en la ejecución diaria de procesos y atención al cliente digital [\ref{ref:expansionia2026}].
+		coordinación formal entre directores de zona (una reunión mensual y una sesión
+		semanal por Teams), complementadas por espacios internos de reparto y ajuste
+		de trabajo.
+	\item \textbf{Dispositivos internos informales de enlace:} existencia de un
+		responsable por área (sin reflejo formal en organigrama) y grupos de trabajo
+		entre gestores para coordinar decisiones de distribución de actividad.
+	\item \textbf{Enlace técnico-digital remoto:} apoyo de especialistas y sistemas
+		corporativos que, sin presencia física en oficina, condicionan la ejecución
+		diaria y la coordinación operativa [\ref{ref:entrevista}] [\ref{ref:expansionia2026}].
 \end{itemize}
 
 La finalidad de estos dispositivos es reducir fricciones entre unidades con
 responsabilidades distintas y mantener consistencia en la ejecución comercial,
 operativa y de cumplimiento normativo.
-
-% --- PENDIENTE DE ENTREVISTA (P30) ---
-% Confirmar nomenclatura interna de los dispositivos de enlace y su frecuencia
-% real de uso en la sucursal estudiada.
 
 \section{Centralización y descentralización}
 
@@ -124,53 +164,90 @@ operativa y de cumplimiento normativo.
 %
 % Especificar claramente a quién se delega poder y sobre qué tipo de decisiones.
 
-Con la evidencia pública disponible y sin sustituir la información primaria de la
-entrevista, el caso apunta a una estructura con \textbf{descentralización vertical
-limitada} y \textbf{descentralización horizontal selectiva}. Es decir, existe
-delegación operativa en la sucursal, pero dentro de límites definidos por políticas
-corporativas, sistemas técnicos y exigencias regulatorias [\ref{ref:bce}]
-[\ref{ref:mifid}] [\ref{ref:basilea}].
+Con la evidencia empírica de entrevista, el caso muestra una estructura con
+\textbf{descentralización vertical acotada} y \textbf{descentralización horizontal
+selectiva}. Existe delegación operativa relevante en la sucursal, pero dentro de
+límites definidos por políticas corporativas, sistemas técnicos y exigencias
+regulatorias [\ref{ref:entrevista}] [\ref{ref:bce}] [\ref{ref:mifid}] [\ref{ref:basilea}].
 
 \subsection*{Descentralización vertical}
 
 La dirección de sucursal suele concentrar decisiones de ejecución comercial y
 organizativa de corto plazo (priorización de actividad, gestión de agenda
 comercial, distribución interna de tareas), mientras que decisiones de mayor impacto
-en riesgo, producto o política comercial quedan en niveles superiores. Este patrón
-es coherente con organizaciones bancarias grandes, donde la autonomía local existe,
-pero se integra en una arquitectura de control y cumplimiento centralizada.
+en riesgo, producto o política comercial quedan en niveles superiores. En la
+entrevista, la directora declara autonomía amplia para orientar la acción comercial
+hacia los objetivos de la oficina y su público objetivo, incluso con margen para
+priorizar productos concretos (por ejemplo, impulso de seguros de salud) cuando no
+contradice las directrices generales. Sin embargo, operaciones de riesgo como
+autopromotor o promoción de viviendas se elevan obligatoriamente a niveles
+superiores [\ref{ref:entrevista}].
+
+Este patrón es coherente con organizaciones bancarias grandes, donde la autonomía
+local existe, pero se integra en una arquitectura de control y cumplimiento
+centralizada.
 
 \subsection*{Descentralización horizontal}
 
 A nivel horizontal, los empleados y especialistas pueden disponer de margen técnico
 en su ámbito (asesoramiento, tramitación, soporte experto), pero dicho margen no
 equivale a autonomía plena sobre decisiones estratégicas o de riesgo elevado. En
-consecuencia, el poder horizontal se reparte de forma selectiva: los expertos ganan
-influencia en decisiones concretas, mientras la decisión final permanece
-normalmente encuadrada en la cadena jerárquica.
+la sucursal analizada, los gestores disponen de un margen de ejecución amplio dentro
+de requisitos fijados por dirección (por ejemplo, una agenda objetivo con un mínimo
+de citas), eligiendo métodos y organización semanal para cumplirlos.
+
+Además, no aparece en oficina un perfil técnico interno con autoridad decisiva
+informal estable; el apoyo experto existe, pero se presta principalmente desde
+departamentos especializados externos a la sucursal (seguros, vida, etc.), de forma
+consultiva [\ref{ref:entrevista}]. En consecuencia, el poder horizontal se reparte
+de forma selectiva y funcional, sin desplazar el centro formal de decisión.
 
 Este equilibrio entre autonomía acotada y control corporativo se ve reforzado por
 la digitalización de procesos, que centraliza información, estandariza criterios y
 hace más trazable la toma de decisiones [\ref{ref:ortakoy2019}] [\ref{ref:expansionia2026}].
 
-\subsection*{Síntesis provisional del capítulo}
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[>=latex, font=\small, line width=0.8pt]
+		% Estructura tipo mapa de decisiones
+		\node[draw, rounded corners=3pt, fill=green!12, text width=5.2cm, minimum height=1.35cm, align=left] (a1) at (-3.1,1.7)
+			{\textbf{Autonomía operativa en sucursal}\\Dirección y gestores deciden \textit{cómo} ejecutar objetivos comerciales y agenda.};
+		\node[draw, rounded corners=3pt, fill=red!10, text width=5.2cm, minimum height=1.35cm, align=left] (a2) at (-3.1,-0.2)
+			{\textbf{Decisiones que escalan}\\Operaciones de riesgo (autopromotor y promoción de viviendas) requieren validación superior.};
+		\node[draw, rounded corners=3pt, fill=blue!10, text width=5.2cm, minimum height=1.35cm, align=left] (a3) at (-3.1,-2.1)
+			{\textbf{Soporte experto}\\Especialistas de departamentos (seguros, vida, etc.) influyen de forma consultiva, sin mando formal local.};
 
-De forma provisional, la sucursal analizada se ajusta a un modelo donde:
+		\node[draw, rounded corners=3pt, fill=gray!10, text width=3.9cm, minimum height=0.9cm, align=center] (r1) at (3.2,1.7)
+			{\textbf{Vertical}\\Descentralización \textbf{acotada}};
+		\node[draw, rounded corners=3pt, fill=gray!10, text width=3.9cm, minimum height=0.9cm, align=center] (r2) at (3.2,-0.2)
+			{\textbf{Vertical}\\Centralización en riesgo};
+		\node[draw, rounded corners=3pt, fill=gray!10, text width=3.9cm, minimum height=0.9cm, align=center] (r3) at (3.2,-2.1)
+			{\textbf{Horizontal}\\Selectiva y consultiva};
+
+		\draw[->] (a1.east) -- (r1.west);
+		\draw[->] (a2.east) -- (r2.west);
+		\draw[->] (a3.east) -- (r3.west);
+
+		\node[font=\footnotesize, align=left] at (0,-3.2)
+			{Lectura: el caso combina autonomía local en ejecución con centralización de decisiones sensibles y apoyo experto no jerárquico.};
+	\end{tikzpicture}
+	\caption{Mapa de decisiones observado en la sucursal: autonomía, escalado y soporte experto.}
+	\label{fig:descentralizacion_ismael}
+\end{figure}
+
+\subsection*{Síntesis del capítulo}
+
+La sucursal analizada se ajusta a un modelo donde:
 \begin{itemize}
-	\item los vínculos laterales principales son planificación, control y enlace
-		funcional entre niveles y unidades;
-	\item la centralización no es absoluta, pero sí predominante en materias
-		estratégicas y de riesgo;
-	\item la descentralización operativa existe, aunque acotada por regulación,
-		sistemas corporativos y objetivos comunes.
+	\item los vínculos laterales principales combinan campañas planificadas,
+		control de resultados por cadena jerárquica y dispositivos de enlace formales
+		e informales;
+	\item la centralización permanece en decisiones sensibles de riesgo y en la
+		cascada de objetivos desde niveles corporativos a oficina;
+	\item la descentralización operativa es real en la ejecución comercial diaria,
+		con autonomía de dirección y gestores para decidir el cómo, dentro de marcos
+		de cumplimiento comunes.
 \end{itemize}
-
-% --- PENDIENTE DE ENTREVISTA (P31-P34) ---
-% Completar con ejemplos concretos de:
-% 1) decisiones autónomas de la directora;
-% 2) decisiones que escalan a territorial/sede;
-% 3) margen decisor de empleados por puesto;
-% 4) especialistas con influencia informal real.
 
 \endinput
 % -------------------------------------------------------------------
