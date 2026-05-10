@@ -21,21 +21,16 @@ indicando a qué parte de la organización pertenece.
 \subsection{Posición de la sucursal en la jerarquía del grupo}
 
 A nivel corporativo, CaixaBank opera bajo la supervisión de un Consejo de Administración
-formado por 15 consejeros, que delega la gestión ejecutiva en una Comisión Ejecutiva
-presidida por el Consejero Delegado, Gonzalo Gortázar Zapatero [\ref{ref:cnmv}]. Bajo
-este nivel directivo máximo se articulan las distintas áreas corporativas especializadas
----Finanzas, Riesgos, Tecnología, Recursos Humanos, Cumplimiento, entre otras--- y la red
-comercial, organizada territorialmente mediante Direcciones Territoriales que agrupan y
-supervisan a las sucursales de cada área geográfica [\ref{ref:informe2024}].
+formado por 15 consejeros [\ref{ref:cnmv}]. La gestión ejecutiva del grupo recae en el
+Consejero Delegado, Gonzalo Gortázar Zapatero, quien ejerce sus funciones a través de
+la Comisión Ejecutiva y de las distintas áreas corporativas especializadas ---Finanzas,
+Riesgos, Tecnología, Recursos Humanos, Cumplimiento, entre otras---. La red comercial
+se organiza territorialmente: cada \textbf{Director de Área} supervisa aproximadamente
+18 sucursales de su zona geográfica, actuando como nivel intermedio entre la sede central
+y las oficinas [\ref{ref:entrevista}].
 
-La sucursal de Motril pertenece a esta red y rinde cuentas a su Dirección Territorial
-correspondiente, que actúa como nivel intermedio entre la sede central y las oficinas de
-su zona. La Figura~\ref{fig:organigrama-corp} recoge este esquema de forma simplificada.
-
-% --- PENDIENTE DE ENTREVISTA (P7) ---
-% Confirmar la denominación exacta del nivel inmediatamente superior
-% al que reporta la directora (¿Director/a Territorial? ¿Director/a de Zona?),
-% y cuántas sucursales supervisa dicha instancia.
+La sucursal de Motril pertenece a esta red y rinde cuentas al Director de Área
+correspondiente. La Figura~\ref{fig:organigrama-corp} ilustra este esquema.
 
 \begin{figure}[htbp]
   \centering
@@ -58,15 +53,15 @@ su zona. La Figura~\ref{fig:organigrama-corp} recoge este esquema de forma simpl
       minimum height = 0.85cm, font = \small\bfseries,
       fill = blue!20
     },
-    arr/.style = {-{Stealth[length=4pt]}, thick},
+    arr/.style  = {-{Stealth[length=4pt]}, thick},
     darr/.style = {-{Stealth[length=4pt]}, thick, dashed}
   ]
 
   % Cadena jerárquica principal
-  \node[mainbox] (ca) {Consejo de Administración};
-  \node[mainbox, below = 0.8cm of ca] (ce) {Comisión Ejecutiva\\{\footnotesize (Consejero Delegado)}};
-  \node[mainbox, below = 0.8cm of ce] (dt) {Dirección Territorial};
-  \node[hibox,   below = 0.8cm of dt] (suc) {Sucursal de Motril};
+  \node[mainbox] (ca)  {Consejo de Administración};
+  \node[mainbox, below = 0.8cm of ca]  (ce)  {Comisión Ejecutiva /\\Consejero Delegado};
+  \node[mainbox, below = 0.8cm of ce]  (da)  {Director de Área\\{\footnotesize (\textasciitilde18 sucursales)}};
+  \node[hibox,   below = 0.8cm of da]  (suc) {Sucursal de Motril};
 
   % Bloque de áreas corporativas (derecha)
   \node[staffbox, right = 2.6cm of ce] (corp)
@@ -74,81 +69,78 @@ su zona. La Figura~\ref{fig:organigrama-corp} recoge este esquema de forma simpl
 
   % Conexiones verticales
   \draw[arr]  (ca)  -- (ce);
-  \draw[arr]  (ce)  -- (dt);
-  \draw[arr]  (dt)  -- (suc);
-  % Conexión dashed hacia las áreas corporativas
+  \draw[arr]  (ce)  -- (da);
+  \draw[arr]  (da)  -- (suc);
   \draw[darr] (ce)  -- (corp);
 
   \end{tikzpicture}
   \caption{Posición de la sucursal de Motril en la jerarquía de CaixaBank (esquema simplificado).
-    Fuente: elaboración propia a partir de [\ref{ref:informe2024}] y [\ref{ref:cnmv}].}
+    Fuente: elaboración propia a partir de [\ref{ref:informe2024}], [\ref{ref:cnmv}]
+    y [\ref{ref:entrevista}].}
   \label{fig:organigrama-corp}
 \end{figure}
 
 \subsection{Organigrama interno de la sucursal de Motril}
 
-En el interior de la sucursal, la estructura jerárquica presenta dos niveles directivos
----Directora y Subdirectora--- bajo los cuales se sitúan cuatro perfiles operativos,
-diferenciados por el segmento de clientela que atienden. La Figura~\ref{fig:organigrama-suc}
-reproduce este organigrama.
-
-% --- PENDIENTE DE ENTREVISTA (P5, P6) ---
-% Validar que el organigrama reproducido corresponde fielmente al oficial
-% de la sucursal y confirmar el número exacto de personas que ocupa cada puesto.
+La estructura interna de la sucursal presenta una particularidad relevante: los
+\textbf{Gestores de Negocio} y los \textbf{Gestores Premier} dependen directamente de
+la Directora, mientras que los \textbf{Gestores de Banca Particular} y los
+\textbf{Gestores de Banca Personal} quedan bajo la supervisión de la Subdirectora.
+La plantilla total asciende a \textbf{15 personas}, distribuidas según se muestra en
+la Figura~\ref{fig:organigrama-suc}.
 
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}[
     box/.style = {
       rectangle, draw, rounded corners = 3pt,
-      text width = 2.9cm, align = center,
+      text width = 3.0cm, align = center,
       minimum height = 1.0cm, font = \small,
       fill = blue!8
     },
     topbox/.style = {
       rectangle, draw, rounded corners = 3pt,
-      text width = 4.2cm, align = center,
+      text width = 4.0cm, align = center,
       minimum height = 1.0cm, font = \small\bfseries,
       fill = blue!20
     },
     midbox/.style = {
       rectangle, draw, rounded corners = 3pt,
-      text width = 4.2cm, align = center,
+      text width = 3.8cm, align = center,
       minimum height = 1.0cm, font = \small,
       fill = blue!12
     },
     arr/.style = {-{Stealth[length=4pt]}, thick}
   ]
 
-  % Nivel 1: Directora
-  \node[topbox] (dir) at (0,0) {Directora de Sucursal};
+  % ---- Nivel 1: Directora ----
+  \node[topbox] (dir) at (0,0) {Directora\\{\footnotesize (×1)}};
 
-  % Nivel 2: Subdirectora
-  \node[midbox] (sub) at (0,-2.0) {Subdirectora};
+  % ---- Nivel 2: tres dependencias directas de la Directora ----
+  \node[box]    (neg)  at (-4.5,-2.8) {Gestor/a de Negocio\\{\footnotesize (×4)}};
+  \node[box]    (prem) at (-0.5,-2.8) {Gestor/a Premier\\{\footnotesize (×3)}};
+  \node[midbox] (sub)  at ( 4.5,-2.8) {Subdirectora\\{\footnotesize (×1)}};
 
-  % Nivel 3: cuatro puestos operativos
-  \node[box] (bp)      at (-4.35,-4.8) {Gestor/a de\\Banca Personal};
-  \node[box] (premier) at (-1.45,-4.8) {Gestor/a\\Premier};
-  \node[box] (negocio) at ( 1.45,-4.8) {Gestor/a\\de Negocio};
-  \node[box] (com)     at ( 4.35,-4.8) {Gestor/a\\Comercial};
+  % Barra horizontal nivel 2
+  \draw (dir.south) -- (0,-1.6);
+  \draw (-4.5,-1.6) -- (4.5,-1.6);
+  \draw[arr] (-4.5,-1.6) -- (neg.north);
+  \draw[arr] (-0.5,-1.6) -- (prem.north);
+  \draw[arr] ( 4.5,-1.6) -- (sub.north);
 
-  % Flecha directora -> subdirectora
-  \draw[arr] (dir.south) -- (sub.north);
+  % ---- Nivel 3: dependencias de la Subdirectora ----
+  \node[box] (bpart) at (2.0,-5.5) {Gestor/a de Banca\\Particular\\{\footnotesize (×3)}};
+  \node[box] (bpers) at (7.0,-5.5) {Gestor/a de Banca\\Personal\\{\footnotesize (×3)}};
 
-  % Barra horizontal de ramificación
-  \coordinate (branch) at (0,-3.2);
-  \draw (sub.south) -- (branch);
-  \draw (-4.35,-3.2) -- (4.35,-3.2);
-
-  % Flechas verticales de la barra a cada gestor
-  \draw[arr] (-4.35,-3.2) -- (bp.north);
-  \draw[arr] (-1.45,-3.2) -- (premier.north);
-  \draw[arr] ( 1.45,-3.2) -- (negocio.north);
-  \draw[arr] ( 4.35,-3.2) -- (com.north);
+  % Barra horizontal nivel 3
+  \draw (sub.south) -- (4.5,-4.3);
+  \draw (2.0,-4.3) -- (7.0,-4.3);
+  \draw[arr] (2.0,-4.3) -- (bpart.north);
+  \draw[arr] (7.0,-4.3) -- (bpers.north);
 
   \end{tikzpicture}
   \caption{Organigrama interno de la sucursal de Motril de CaixaBank.
-    Fuente: elaboración propia a partir de la entrevista con la directora [\ref{ref:entrevista}].}
+    Fuente: elaboración propia a partir de la entrevista con la directora.}
   \label{fig:organigrama-suc}
 \end{figure}
 
@@ -157,99 +149,91 @@ reproduce este organigrama.
 % ===================================================================
 
 A continuación se describe la función de cada unidad o puesto identificado en los
-organigramas y se indica a qué parte de la organización pertenece. Las unidades se agrupan
-según su papel dentro del conjunto del grupo CaixaBank.
+organigramas y se indica a qué parte de la organización pertenece. Las unidades se
+agrupan según su papel dentro del conjunto del grupo CaixaBank.
 
 % -------------------------------------------------------------------
 \subsection{Ápice estratégico: Consejo de Administración y Comisión Ejecutiva}
 % -------------------------------------------------------------------
 
 El \textbf{Consejo de Administración} de CaixaBank está formado por 15 consejeros y
-constituye el máximo órgano de gobierno de la sociedad. Aprueba la estrategia corporativa,
-supervisa la gestión del grupo, vela por los intereses de los accionistas y demás grupos
-de interés, y rinde cuentas ante los organismos reguladores [\ref{ref:cnmv}].
+constituye el máximo órgano de gobierno de la sociedad. Aprueba la estrategia
+corporativa, supervisa la gestión del grupo, vela por los intereses de los accionistas
+y demás grupos de interés, y rinde cuentas ante los organismos reguladores [\ref{ref:cnmv}].
 
-La \textbf{Comisión Ejecutiva}, presidida por el Consejero Delegado Gonzalo Gortázar
-Zapatero, ejerce las funciones ejecutivas de alta dirección: dirige las operaciones del
-grupo, coordina las distintas áreas de negocio y toma las decisiones estratégicas de mayor
-alcance.
+La \textbf{Comisión Ejecutiva}, en la que participa el Consejero Delegado Gonzalo
+Gortázar Zapatero como máximo responsable ejecutivo, ejerce las funciones de alta
+dirección: dirige las operaciones del grupo, coordina las distintas áreas de negocio y
+toma las decisiones estratégicas de mayor alcance.
 
 Ambos órganos forman el \textbf{ápice estratégico} de CaixaBank, ya que concentran la
-máxima autoridad formal sobre el conjunto de la organización y son los responsables últimos
-de su dirección y supervisión.
+máxima autoridad formal sobre el conjunto de la organización.
 
 % -------------------------------------------------------------------
-\subsection{Línea media: Dirección Territorial, Directora y Subdirectora de sucursal}
+\subsection{Línea media: Director de Área, Directora y Subdirectora de sucursal}
 % -------------------------------------------------------------------
 
 Entre la alta dirección y el personal que atiende a los clientes en las oficinas se
 sitúan los mandos intermedios, que transmiten objetivos y directrices en sentido
 descendente y reportan resultados en sentido ascendente.
 
-Las \textbf{Direcciones Territoriales} de CaixaBank supervisan y coordinan a las
-sucursales de su demarcación geográfica. Reciben los objetivos comerciales y operativos
-fijados por la sede, los adaptan a las condiciones de su territorio y los trasladan a las
-distintas oficinas; en sentido inverso, consolidan los resultados de las sucursales y los
-reportan a la Comisión Ejecutiva [\ref{ref:informe2024}].
+El \textbf{Director de Área} de CaixaBank supervisa y coordina aproximadamente
+\textbf{18 sucursales} dentro de su demarcación geográfica [\ref{ref:entrevista}].
+Recibe los objetivos comerciales y operativos fijados por la sede, los adapta a las
+condiciones de su territorio y los traslada a cada oficina; en sentido inverso,
+consolida los resultados y los reporta a la Comisión Ejecutiva [\ref{ref:informe2024}].
 
-La \textbf{Directora de la sucursal de Motril} ocupa asimismo la línea media dentro del
-grupo: su función es trasladar al equipo de la oficina las directrices que recibe de la
-Dirección Territorial, gestionar los objetivos comerciales locales, representar a
-CaixaBank ante los clientes e instituciones del ámbito local y reportar los resultados de
-la sucursal a sus superiores. Es el máximo responsable de la toma de decisiones en el
-ámbito de la oficina.
+La \textbf{Directora de la sucursal de Motril} ocupa asimismo la línea media dentro
+del grupo: su función es trasladar al equipo de la oficina las directrices que recibe
+del Director de Área, gestionar los objetivos comerciales locales y representar a
+CaixaBank en el ámbito local. Es la máxima responsable de la toma de decisiones en la
+oficina y tiene bajo su mando directo a los Gestores de Negocio y a los Gestores
+Premier [\ref{ref:entrevista}].
 
-La \textbf{Subdirectora} completa este nivel intermedio: asiste a la directora,
-supervisa directamente al equipo operativo, y asume las responsabilidades de dirección
-cuando la directora no está presente en la oficina.
-
-% --- PENDIENTE DE ENTREVISTA (P7) ---
-% Confirmar el nombre y el rango exacto del directivo o directiva al que
-% reporta la directora de sucursal dentro de la estructura territorial.
+La \textbf{Subdirectora} completa este nivel intermedio: asiste a la directora y
+supervisa directamente a los Gestores de Banca Particular y a los Gestores de Banca
+Personal, asumiendo las responsabilidades de dirección en ausencia de la directora.
 
 % -------------------------------------------------------------------
 \subsection{Núcleo de operaciones: los equipos de gestores}
 % -------------------------------------------------------------------
 
 El personal que atiende directamente a los clientes y ejecuta los servicios financieros
-de la sucursal constituye el núcleo de operaciones. En la sucursal de Motril se distinguen
-cuatro perfiles operativos, cada uno orientado a un segmento específico de clientela:
+de la sucursal constituye el núcleo de operaciones. La plantilla de 15 personas se
+distribuye en cuatro perfiles operativos diferenciados por el segmento de clientela que
+atienden [\ref{ref:entrevista}]:
 
 \begin{itemize}
 
-  \item \textbf{Gestor/a de Banca Personal.}
-  Proporciona asesoramiento financiero integral a clientes de alto patrimonio. Sus tareas
-  incluyen la planificación patrimonial, la gestión de carteras de inversión, la
-  contratación de productos complejos (fondos de inversión, seguros de ahorro, planes de
-  pensiones) y el seguimiento personalizado de la situación financiera de cada cliente.
-  Requiere habilitación profesional conforme a la normativa MiFID\,II.
-
-  \item \textbf{Gestor/a Premier.}
-  Atiende a clientes con un nivel de ahorro medio-alto que requieren asesoramiento
-  financiero especializado. Gestiona productos de ahorro e inversión, seguros, financiación
-  hipotecaria y otros productos adaptados al perfil financiero del cliente. Comparte con
-  el perfil anterior la necesidad de certificación MiFID\,II.
-
-  \item \textbf{Gestor/a de Negocio.}
+  \item \textbf{Gestor/a de Negocio (×4).}
   Se ocupa de la atención y financiación a pequeñas empresas y autónomos. Sus funciones
   incluyen la instrucción de operaciones de financiación empresarial (préstamos, líneas de
   crédito, descuento comercial), la gestión de cuentas de empresa, el asesoramiento en
   productos de tesorería y el seguimiento de la actividad mercantil del segmento pyme y
-  autónomo.
+  autónomo. Depende directamente de la Directora.
 
-  \item \textbf{Gestor/a Comercial.}
+  \item \textbf{Gestor/a Premier (×3).}
+  Atiende a clientes con un nivel de ahorro medio-alto que requieren asesoramiento
+  financiero especializado. Gestiona productos de ahorro e inversión, seguros, financiación
+  hipotecaria y otros productos adaptados al perfil financiero del cliente. Requiere
+  habilitación conforme a la normativa MiFID\,II y depende directamente de la Directora.
+
+  \item \textbf{Gestor/a de Banca Particular (×3).}
   Es el puesto de primer contacto con los clientes particulares de la sucursal. Realiza
-  las operaciones más habituales del día a día: operativa de caja, apertura y mantenimiento
-  de cuentas corrientes, gestión de tarjetas, tramitación de transferencias, contratación
-  de productos de ahorro básico y atención de incidencias generales. Es el perfil más
-  ligado a la atención presencial en ventanilla.
+  las operaciones más habituales del día a día: apertura y mantenimiento de cuentas
+  corrientes, gestión de tarjetas, tramitación de transferencias, operativa de caja,
+  contratación de productos de ahorro básico y atención de incidencias generales. Depende
+  de la Subdirectora.
+
+  \item \textbf{Gestor/a de Banca Personal (×3).}
+  Proporciona asesoramiento financiero integral a clientes de alto patrimonio. Sus tareas
+  incluyen la planificación patrimonial, la gestión de carteras de inversión, la
+  contratación de productos complejos (fondos de inversión, seguros de ahorro, planes de
+  pensiones) y el seguimiento personalizado de la situación financiera de cada cliente.
+  Requiere habilitación profesional conforme a la normativa MiFID\,II y depende de la
+  Subdirectora.
 
 \end{itemize}
-
-% --- PENDIENTE DE ENTREVISTA (P1, P8) ---
-% Confirmar con la directora el catálogo completo de productos y servicios
-% ofrecidos en la sucursal, así como las funciones exactas y el número de
-% personas asignadas a cada uno de los cuatro perfiles operativos.
 
 % -------------------------------------------------------------------
 \subsection{Tecnoestructura: departamentos corporativos de normalización}
@@ -257,36 +241,36 @@ cuatro perfiles operativos, cada uno orientado a un segmento específico de clie
 
 CaixaBank dispone a nivel central de una serie de unidades cuya función no es prestar
 servicios directamente a los clientes, sino diseñar, normalizar y controlar los procesos
-y los criterios de actuación que sigue el personal de toda la red de sucursales. Estas
-unidades no están presentes físicamente en la sucursal de Motril: operan desde la sede
-y su influencia se materializa a través de los sistemas informáticos, los protocolos
-internos y los programas de formación que recibe el personal.
+y los criterios de actuación que sigue el personal de toda la red de sucursales. Según
+confirmó la directora de la sucursal de Motril, ninguno de estos departamentos cuenta
+con representación física en la oficina: operan íntegramente desde la sede y su
+influencia se materializa a través de los sistemas informáticos, los protocolos internos
+y los programas de formación que recibe el personal [\ref{ref:entrevista}].
 
 \begin{itemize}
 
   \item \textbf{Departamento de Cumplimiento Normativo (\textit{Compliance}).}
   Diseña y supervisa los protocolos que los empleados deben seguir en materia de prevención
   del blanqueo de capitales, de comercialización de productos de inversión conforme a
-  MiFID\,II y del resto de obligaciones regulatorias aplicables. Este departamento
-  \textbf{normaliza los procesos de trabajo}: establece qué pasos debe ejecutar el
-  empleado en cada tipo de operación, cómo documentarla y en qué orden firmarla, de modo
-  que la secuencia de actuación queda predefinida con independencia de la sucursal o del
-  gestor concreto [\ref{ref:mifid}].
+  MiFID\,II y del resto de obligaciones regulatorias aplicables. \textbf{Normaliza los
+  procesos de trabajo}: establece qué pasos debe ejecutar el empleado en cada operación,
+  cómo documentarla y en qué orden firmarla, de modo que la secuencia de actuación queda
+  predefinida con independencia de la sucursal o del gestor concreto [\ref{ref:mifid}].
 
   \item \textbf{Departamento de Gestión del Riesgo.}
   Define los parámetros de concesión de crédito que condicionan las decisiones de los
   gestores: modelos de \textit{scoring}, límites de exposición, garantías exigibles y
-  criterios de aprobación. Este departamento \textbf{normaliza los resultados}: fija las
-  propiedades que debe presentar una operación para ser aprobada, acotando la discrecio\-
-  nalidad del gestor instructor con independencia de quién la tramite [\ref{ref:basilea}].
+  criterios de aprobación. \textbf{Normaliza los resultados}: fija las propiedades que
+  debe presentar una operación para ser aprobada, acotando la discrecionalidad del gestor
+  instructor con independencia de quién la tramite [\ref{ref:basilea}].
 
   \item \textbf{Departamento de Formación y Desarrollo} (integrado en RRHH).
   Diseña y gestiona los programas de formación obligatoria, las rutas de aprendizaje y las
-  certificaciones profesionales que debe acreditar el personal. Por ejemplo, es el
-  responsable de garantizar que los gestores que asesoran en inversiones dispongan de la
-  habilitación MiFID\,II antes de ejercer esas funciones. Este departamento
-  \textbf{normaliza las habilidades}: asegura que quienes ocupan determinados puestos
-  tienen el nivel de conocimiento y competencia requerido [\ref{ref:mifid}].
+  certificaciones profesionales que debe acreditar el personal. Es el responsable de
+  garantizar que los gestores que asesoran en inversiones dispongan de la habilitación
+  MiFID\,II antes de ejercer esas funciones. \textbf{Normaliza las habilidades}: asegura
+  que quienes ocupan determinados puestos tienen el nivel de conocimiento y competencia
+  requerido [\ref{ref:mifid}].
 
   \item \textbf{Departamento de Auditoría Interna.}
   Revisa periódicamente el grado de cumplimiento de los procedimientos en las sucursales,
@@ -302,43 +286,35 @@ internos y los programas de formación que recibe el personal.
 % -------------------------------------------------------------------
 
 Al igual que la tecnoestructura, el \textit{staff} de apoyo de CaixaBank opera de forma
-centralizada desde la sede y presta servicios que facilitan el funcionamiento de toda la
-red de sucursales, aunque no intervienen directamente en la prestación del servicio
-bancario al cliente. Dada la dimensión del grupo ---más de 45.000 empleados---,
-la externalización y centralización de estas funciones resulta económicamente más
-eficiente que mantener equipos de apoyo en cada oficina [\ref{ref:informe2024}].
+completamente centralizada desde la sede y presta servicios que facilitan el funcionamiento
+de toda la red de sucursales, sin intervenir directamente en la prestación del servicio
+bancario al cliente. La directora confirmó que ninguna de estas funciones dispone de
+representación física en la sucursal de Motril [\ref{ref:entrevista}].
 
 \begin{itemize}
 
   \item \textbf{Departamento de Recursos Humanos} (funciones no formativas).
   Gestiona la selección, contratación, retribución, movilidad interna y relaciones
-  laborales de toda la plantilla. La sucursal de Motril no dispone de un responsable de
-  RRHH propio: cualquier trámite relativo al personal se canaliza a través de la sede.
+  laborales de toda la plantilla. Cualquier trámite de personal en la sucursal se
+  canaliza a través de la sede.
 
   \item \textbf{Departamento de Tecnología e Informática.}
   Desarrolla y mantiene las plataformas tecnológicas que utiliza el personal de las
-  sucursales para operar: el sistema de gestión bancaria (\textit{core banking}),
-  las herramientas de CRM, las aplicaciones de \textit{scoring} de riesgos y los canales
-  digitales de atención al cliente. Cualquier incidencia técnica en la oficina se resuelve
-  de forma remota o mediante equipos de soporte especializados.
+  sucursales: el sistema de gestión bancaria (\textit{core banking}), las herramientas
+  de CRM, las aplicaciones de \textit{scoring} de riesgos y los canales digitales de
+  atención al cliente. Cualquier incidencia técnica en la oficina se resuelve de forma
+  remota.
 
   \item \textbf{Departamento Jurídico y Regulatorio.}
   Presta asesoramiento legal a la dirección y a las sucursales en materias contractuales,
-  litigiosas y de interpretación normativa. No mantiene representación física en la
-  oficina de Motril.
+  litigiosas y de interpretación normativa.
 
   \item \textbf{Departamento de Comunicación e Imagen Corporativa.}
-  Gestiona la marca, la comunicación externa e interna, y las campañas institucionales del
-  grupo, proporcionando materiales y directrices que afectan también a la imagen y la
-  comunicación de cada sucursal.
+  Gestiona la marca, la comunicación externa e interna y las campañas institucionales del
+  grupo, proporcionando materiales y directrices que afectan también a la imagen de cada
+  sucursal.
 
 \end{itemize}
-
-% --- PENDIENTE DE ENTREVISTA (P9, P10) ---
-% Confirmar que ninguna de las funciones de tecnoestructura ni de staff de
-% apoyo tiene representante físico asignado a la sucursal, y verificar si
-% existe algún especialista de apoyo vinculado localmente (por ejemplo,
-% un analista de riesgos asignado a la zona o un técnico de RRHH de zona).
 
 \endinput
 % -------------------------------------------------------------------
